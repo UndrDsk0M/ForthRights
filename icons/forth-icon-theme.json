@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "fs-file": {
+      "iconPath": "./icons/file1.png"
+    }
+  },
+  "file": {
+    ".fs": "file1"
+  }
+}

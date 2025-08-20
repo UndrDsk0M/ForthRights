@@ -1,0 +1,55 @@
+{
+  "name": "forthr",
+  "displayName": "forthRights",
+  "description": "Forth programming language support (Run button ( gforth {file} ) it also has icon support",
+  "version": "0.0.5",
+  "publisher": "EhsanVakil",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UndrDsk0M/ForthRights.git"
+  },
+ "main": "extension.js",
+  "activationEvents": [
+    "onCommand:forth.runFile"
+  ],
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "iconThemes": [{
+      "id": "forth-icons",
+      "label": "Forth Icons",
+      "path": "./icons/forth-icon-theme.json"
+    }],
+    "languages": [{
+      "id": "forth",
+      "aliases": ["forth", "forth"],
+      "extensions": [".fs","4th"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "forth",
+      "scopeName": "source.forth",
+      "path": "./syntaxes/forth.tmLanguage.json"
+    }],
+    "commands": [
+      {
+        "command": "forth.runFile",
+        "title": "Run Forth File"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "forth.runFile",
+          "when": "resourceLangId == forth",
+          "group": "navigation"
+        }
+      ]
+    }
+  }
+}

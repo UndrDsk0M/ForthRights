@@ -1,0 +1,12 @@
+{
+	"scopeName": "source.forth",
+	"name": "Forth",
+	"patterns": [
+	  { "match": "\\b\\d+\\b", "name": "constant.numeric.forth" },
+	  { "match": "\\:\\s+\\w+", "name": "entity.name.function.forth" },
+	  { "match": "\\.\\\"", "name": "string.quoted.double.forth" },
+	  { "match": "\\bdup|drop|swap|over|rot\\b", "name": "keyword.control.forth" }
+	],
+	"repository": {}
+  }
+  
